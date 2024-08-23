@@ -3,7 +3,7 @@
     public class Episode
     {
         public int Id { get; set; }
-        public string? File { get; set; }
-        public string? Title { get; set; }
+        public string File { get; set; } = string.Empty;
+        public string Title { get; set; } = string.Empty;
     }
 }

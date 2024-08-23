@@ -3,11 +3,14 @@
     public class Preview
     {
         public int Id {  get; set; }
-        public string? Title { get; set; }
-        public string? Description { get; set; }
-        public int? Seasons { get; set; }
-        public string? Image {  get; set; }
-        public ICollection<int>? GenreIds { get; set; }
-        public string? Updated {  get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public int Seasons { get; set; } = 0;
+        public string Image {  get; set; } = string.Empty;
+        public string Updated {  get; set; } = string.Empty;
+
+        // Relationships
+        public virtual Show Show { get; set; } = new Show();
+        public virtual ICollection<Genre> Genres { get; set; } = [];
     }
 }
