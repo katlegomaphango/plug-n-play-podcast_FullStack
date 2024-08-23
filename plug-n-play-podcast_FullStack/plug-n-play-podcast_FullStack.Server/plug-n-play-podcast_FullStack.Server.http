@@ -1,0 +1,6 @@
+@plug_n_play_podcast_FullStack.Server_HostAddress = http://localhost:5268
+
+GET {{plug_n_play_podcast_FullStack.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
