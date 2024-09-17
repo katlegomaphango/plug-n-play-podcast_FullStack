@@ -1,3 +1,6 @@
+using BackEnd_WebAPI.Interfaces;
+using BackEnd_WebAPI.Services;
+
 namespace BackEnd_WebAPI
 {
     public class Program
@@ -7,8 +10,10 @@ namespace BackEnd_WebAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddSingleton<IPodcastData, PodcastServices>();
             builder.Services.AddControllers();
+
+            builder.Services.AddEndpointsApiExplorer();
 
             var app = builder.Build();
 
