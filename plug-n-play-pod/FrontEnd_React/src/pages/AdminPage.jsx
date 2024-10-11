@@ -1,5 +1,6 @@
 import { Box, Button, styled, Typography } from "@mui/material"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 const MainBox = styled(Box)({
     width: '100%',
@@ -138,7 +139,10 @@ const SignUp = () => {
             </form>
         </StyledBox>
         <Typography variant="h6">
-            Already have an account? Login {/*implement link */}
+            Already have an account?
+            <Link to={'/'} style={{color: 'white', textDecoration: 'none', marginLeft: '0.5rem'}}>
+                Login
+            </Link>
         </Typography>
       </MainBox>
   )
